@@ -1,0 +1,110 @@
+#
+# wm independent hotkeys
+#
+
+# terminal emulator
+super + Return
+	alacritty
+# program launcher
+super + e
+	rofi -show drun -theme ${HOME}/.config/berry/rofi/waterpeak.rasi
+
+# make sxhkd reload its configuration files:
+super + Escape
+	pkill -USR1 -x sxhkd
+
+#
+# berry hotkeys
+#
+
+alt + {Left,Down,Up,Right}
+    berryc window_move {-50 0, 0 50, 0 -50, 50 0}
+
+super + shift +  {Left,Down,Up,Right}
+    berryc window_resize {-50 0, 0 50, 0 -50, 50 0}
+
+super + {1-6}
+    berryc switch_workspace {1-6}
+
+super + shift + {1-6}
+    berryc send_to_workspace {1-6}
+
+super + {Up,Down}
+    berryc window_monocle
+
+super + f
+    berryc fullscreen
+
+super +  Right
+    berryc snap_right
+
+super + Left 
+    berryc snap_left
+
+super + w
+    berryc toggle_decorations
+
+super + Tab
+    berryc cycle_focus
+
+super + q
+    berryc window_close
+
+super + c
+    berryc window_center
+
+~button1
+    berryc pointer_focus
+
+super + alt + c
+	restart 
+#power menu
+super + shift + q
+	$HOME/.config/rofi/applets/applets/powermenu.sh
+#network menu
+
+super + n
+	$HOME/.config/rofi/applets/applets/network.sh
+	
+#mpd menu 
+super + space
+	$HOME/.config/rofi/applets/applets/mpd.sh	
+#screenshot menu
+Print
+        $HOME/.config/rofi/applets/applets/screenshot.sh
+
+# make sxhkd reload its configuration files:
+super + Escape
+	pkill -USR1 -x sxhkd 
+
+
+# volumectl
+XF86Audio{RaiseVolume,LowerVolume,Mute}
+	${HOME}/.scripts/change-volume {up,down,mute}
+
+# brightnessctl
+XF86MonBrightness{Down,Up}
+	${HOME}/.scripts/change-brightness {down,up}
+
+# screenshot menu
+super + F1
+	${HOME}/.scripts/screenshot/screenshot.sh
+
+# power menu
+super + F4
+	${HOME}/.scripts/Rofi/powermenu.sh 
+
+# color picker from desktop
+super + r
+	${HOME}/.scripts/fun/color-picker.sh
+
+# quit/restart berry
+super + shift + c
+      $HOME/.config/berry/autostart
+super + shift + {e}
+        berryc {quit}
+
+# lockscreen
+super + l
+	betterlockscreen -l 
+
