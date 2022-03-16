@@ -1,4 +1,4 @@
-# WaterWawes
+# WaterWaves
 
 my berry dotfiles with mountain-peek cholor scheme!
 
