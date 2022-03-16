@@ -12,3 +12,4 @@ BAR: Polyabar
 CHEME: Mountain-peak
 TERMINAL: Alacritty
 FETCH: bunnyfetch
+wallpaper: in dots
