@@ -7,9 +7,15 @@ my berry dotfiles with mountain-peek cholor scheme!
 #Some Info
 
 OS: arch
+
 WM: berry
+
 BAR: Polyabar
+
 CHEME: Mountain-peak
+
 TERMINAL: Alacritty
+
 FETCH: bunnyfetch
+
 wallpaper: in dots
